@@ -69,7 +69,7 @@ export default function Navbar() {
           to="/"
           className="text-lg font-semibold text-slate-900 hover:opacity-80"
         >
-          EDU<span className="font-normal text-slate-600">SAAS</span>
+          SPYI<span className="font-normal text-slate-600">TECH</span>
         </Link>
 
           {/* Desktop Menu */}

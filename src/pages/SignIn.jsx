@@ -17,7 +17,7 @@ export default function SignIn() {
         <form className="space-y-5">
           {/* Email */}
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">
+            <label className="text-start block text-sm font-medium text-slate-700 mb-1">
               Email
             </label>
             <input
@@ -29,7 +29,7 @@ export default function SignIn() {
 
           {/* Password */}
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">
+            <label className="text-start block text-sm font-medium text-slate-700 mb-1">
               Password
             </label>
             <input

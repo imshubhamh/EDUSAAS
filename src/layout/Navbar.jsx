@@ -13,14 +13,17 @@ export default function Navbar() {
         {
           title: "LMS Platform",
           desc: "Create and manage courses, notes and students",
+          path: "/products/lms",
         },
         {
           title: "Multi-Tenant SaaS",
           desc: "Launch multiple education websites from one panel",
+          path: "/products/saas",
         },
         {
           title: "Admin Dashboard",
           desc: "Manage users, analytics and payments",
+          path: "/products/admin-dashboard",
         },
       ],
     },
@@ -30,14 +33,17 @@ export default function Navbar() {
         {
           title: "For Colleges",
           desc: "Centralized learning system for institutions",
+          path: "/solutions/colleges",
         },
         {
           title: "For Teachers",
           desc: "Manage content, batches and students",
+          path: "/solutions/teachers",
         },
         {
           title: "For Students",
           desc: "Learn, track progress and get certificates",
+          path: "/solutions/students",
         },
       ],
     },
@@ -47,30 +53,34 @@ export default function Navbar() {
         {
           title: "Docs",
           desc: "Developer & platform documentation",
+          path: "/docs",
         },
         {
           title: "Blog",
           desc: "Updates, guides and best practices",
+          path: "/blog",
         },
         {
           title: "Support",
           desc: "Help center and FAQs",
+          path: "/support",
         },
       ],
     },
   ];
+
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-6">
         <div className="h-16 flex items-center justify-between">
           {/* Logo */}
-        <Link
-          to="/"
-          className="text-lg font-semibold text-slate-900 hover:opacity-80"
-        >
-          SPYI<span className="font-normal text-slate-600">TECH</span>
-        </Link>
+          <Link
+            to="/"
+            className="text-lg font-semibold text-slate-900 hover:opacity-80"
+          >
+            SPYI<span className="font-normal text-slate-600">TECH</span>
+          </Link>
 
           {/* Desktop Menu */}
           <nav className="hidden lg:flex items-center gap-8">
@@ -95,17 +105,15 @@ export default function Navbar() {
 
                     <div className="rounded-lg border border-slate-200 bg-white shadow-sm p-1">
                       {menu.items.map((item) => (
-                        <div
+                        <Link
                           key={item.title}
-                          className="rounded-md px-3 py-2.5 hover:bg-slate-50 cursor-pointer"
+                          to={item.path}
+                          className="block rounded-md px-3 py-2.5 hover:bg-slate-50"
+                          onClick={() => setActiveMenu(null)}
                         >
-                          <p className="text-sm font-medium text-slate-800 text-start">
-                            {item.title}
-                          </p>
-                          <p className="mt-0.5 text-xs text-slate-500 leading-snug text-start">
-                            {item.desc}
-                          </p>
-                        </div>
+                          <p className="text-sm font-medium text-slate-800 text-start">{item.title}</p>
+                          <p className="mt-0.5 text-xs text-slate-500 leading-snug text-start">{item.desc}</p>
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -115,21 +123,21 @@ export default function Navbar() {
           </nav>
 
           {/* Right Actions */}
-      <div className="hidden lg:flex items-center gap-3">
-        <Link
-            to="/signin"
-            className="text-sm text-slate-700 hover:text-slate-900"
-        >
-            Sign in
-        </Link>
+          <div className="hidden lg:flex items-center gap-3">
+            <Link
+              to="/signin"
+              className="text-sm text-slate-700 hover:text-slate-900"
+            >
+              Sign in
+            </Link>
 
-        <Link
-            to="/register"
-            className="px-4 py-2 text-sm rounded-md border border-slate-300 text-slate-800 hover:bg-slate-100"
-        >
-            Get started
-        </Link>
-    </div>
+            <Link
+              to="/register"
+              className="px-4 py-2 text-sm rounded-md border border-slate-300 text-slate-800 hover:bg-slate-100"
+            >
+              Get started
+            </Link>
+          </div>
 
 
           {/* Mobile Toggle */}
@@ -153,14 +161,15 @@ export default function Navbar() {
                 </summary>
                 <div className="mt-2 pl-3 space-y-3">
                   {menu.items.map((item) => (
-                    <div key={item.title}>
-                      <p className="text-sm text-slate-800 text-start">
-                        {item.title}
-                      </p>
-                      <p className="text-xs text-slate-500 text-start">
-                        {item.desc}
-                      </p>
-                    </div>
+                    <Link
+                      key={item.title}
+                      to={item.path}
+                      onClick={() => setMobileOpen(false)}
+                      className="block"
+                    >
+                      <p className="text-sm text-slate-800 text-start">{item.title}</p>
+                      <p className="text-xs text-slate-500 text-start">{item.desc}</p>
+                    </Link>
                   ))}
                 </div>
               </details>

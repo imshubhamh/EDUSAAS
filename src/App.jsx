@@ -1,27 +1,34 @@
-import { useState } from 'react'
-import './App.css'
-import LandingPage from './pages/LandingPage'
-import Navbar from './components/layout/Navbar'
-import { Route, Routes } from 'react-router-dom'
-import SignIn from './pages/SignIn'
-import Register from './pages/Register'
-import Footer from './components/layout/Footer'
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { mainRoutes } from "./routes/AppRoutes";
+import MainLayout from "./layout/MainLayout";
 
-function App() {
-  const [count, setCount] = useState(0)
+function RouteWithSlash() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!location.pathname.endsWith("/")) {
+      navigate(
+        location.pathname + "/" + location.search + location.hash,
+        { replace: true }
+      );
+    }
+  }, [location, navigate]);
 
   return (
-    <>
-    
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<LandingPage/>} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
-      <Footer/>
-    </>
-  )
+    <Routes>
+      <Route element={<MainLayout />}>
+        {mainRoutes.map(({ path, element }) => (
+          <Route key={path} path={path} element={element} />
+        ))}
+      </Route>
+    </Routes>
+  );
 }
 
-export default App
+function App() {
+  return <RouteWithSlash />;
+}
+
+export default App;

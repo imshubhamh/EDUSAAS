@@ -16,7 +16,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <h3 className="text-lg font-semibold text-slate-900">
-              EDU<span className="font-normal text-slate-500">SAAS</span>
+              SPYI<span className="font-normal text-slate-500">TECH</span>
             </h3>
 
             <p className="mt-4 text-sm leading-relaxed max-w-sm">
@@ -104,7 +104,7 @@ export default function Footer() {
       <div className="w-full border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-20 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs sm:text-sm text-slate-500 text-center sm:text-left">
           <p>
-            © {new Date().getFullYear()} EDU SAAS
+            © {new Date().getFullYear()} SPYI TECH
           </p>
           <p>
             Built for educators & institutions

@@ -8,7 +8,7 @@ import Register from './pages/Register'
 import Footer from './components/layout/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
     <>

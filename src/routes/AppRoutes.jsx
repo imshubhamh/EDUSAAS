@@ -6,6 +6,7 @@ import ContentDescription from "../components/blog/ContentDescription";
 import Pricing from "../pages/Pricing";
 import AboutPage from "../pages/AboutPage";
 import FAQPage from "../pages/FAQPage";
+import Contact from "../pages/Contact";
 
 export const mainRoutes = [
   { path: "/", element: <LandingPage /> },
@@ -20,6 +21,7 @@ export const mainRoutes = [
   { path: "/blog", element: <Blog /> },
   { path: "/blog/:slug", element: <ContentDescription /> },
   { path: "/faqs", element: <FAQPage /> },
+   { path: "/support", element: <Contact /> },
 
 
   // Company

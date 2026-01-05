@@ -8,11 +8,10 @@ function RouteWithSlash() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!location.pathname.endsWith("/")) {
-      navigate(
-        location.pathname + "/" + location.search + location.hash,
-        { replace: true }
-      );
+    const { pathname, search, hash } = location;
+
+    if (pathname !== "/" && !pathname.endsWith("/")) {
+      navigate(`${pathname}/${search}${hash}`, { replace: true });
     }
   }, [location, navigate]);
 

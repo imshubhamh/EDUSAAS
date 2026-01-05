@@ -154,10 +154,11 @@ const Blog = () => {
             {/* ================= HERO ================= */}
             <section className="relative h-[30vh] flex items-center justify-center px-6 pt-28">
                 <div className="text-center space-y-3">
-                    <h1 className="text-3xl sm:text-5xl text-black">SPYITECH’s Blog</h1>
-                    <p className="text-sm sm:text-base text-gray-500 max-w-xl mx-auto">
+                    <h1 className="text-3xl sm:text-3xl text-black">SPYI<span className="font-normal text-slate-600">TECH</span> BLOG's</h1>
+                    {/* SPYI<h3 className="font-normal text-slate-600">TECH</h3> */}
+                    {/* <p className="text-sm sm:text-base text-gray-500 max-w-xl mx-auto">
                         Insights, updates, and guides on LMS platforms, SaaS solutions, and effective education management.
-                    </p>
+                    </p> */}
                 </div>
             </section>
 
@@ -171,7 +172,7 @@ const Blog = () => {
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             placeholder="Search blogs..."
-                            className="w-full px-5 py-3 rounded-full border border-gray-300 text-sm text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black/10 transition"
+                            className="w-full px-5 py-2 rounded-full border border-gray-300 text-sm text-black placeholder-gray-400 focus:outline-none"
                         />
                         <svg
                             className="w-4 h-4 absolute right-5 top-1/2 -translate-y-1/2 text-gray-400"
@@ -210,7 +211,7 @@ const Blog = () => {
                                             </div>
 
                                             <span className="text-xs font-medium text-black hover:underline mt-10 flex-shrink-0">
-                                                Read →
+                                                Read more →
                                             </span>
                                         </Link>
                                     );
@@ -228,9 +229,9 @@ const Blog = () => {
                         <button
                             key={cat}
                             onClick={() => setActiveCategory(cat)}
-                            className={`px-5 py-2 rounded-full text-sm border transition ${activeCategory === cat
-                                ? "bg-black text-white border-black"
-                                : "bg-white text-gray-600 border-gray-300 hover:border-black"
+                            className={`px-5 py-1 rounded-full text-sm border transition ${activeCategory === cat
+                                ? "bg-gray-50 text-black "
+                                : "bg-white text-gray-600 border-gray-300"
                                 }`}
                         >
                             {cat}
@@ -240,7 +241,7 @@ const Blog = () => {
             </section>
 
             {/* ================= LATEST BLOG ================= */}
-            {latestBlog && (
+            {/* {latestBlog && (
                 <section className="max-w-7xl mx-auto px-6 mb-20">
                     <Link
                         to={`/blog/${latestBlog.title
@@ -264,7 +265,7 @@ const Blog = () => {
                         </div>
                     </Link>
                 </section>
-            )}
+            )} */}
 
 
             {/* ================= BLOG GRID ================= */}
@@ -277,32 +278,36 @@ const Blog = () => {
                             .replace(/^-+|-+$/g, "");
 
                         return (
-                            <Link
-                                key={blog.id}
-                                to={`/blog/${slug}`}
-                                className="group border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition bg-white flex flex-col"
-                            >
-                                <div className="relative h-48 w-full overflow-hidden bg-gray-100">
+                            <>
+                            <div className="group overflow-hidden bg-white flex flex-col">
+                                <div className="relative h-48 w-full overflow-hidden">
                                     <img
                                         src={blog.image}
                                         alt={blog.title}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        className="w-full h-full object-cover rounded-xl"
                                     />
                                 </div>
                                 <div className="p-6 flex flex-col flex-grow">
                                     <span className="text-xs text-gray-400 mb-2">{blog.category}</span>
-                                    <h3 className="text-lg font-semibold text-black mb-3 leading-snug">
+                                    <h3 className="text-lg font-semibold text-black mb-2 leading-snug">
                                         {blog.title}
                                     </h3>
                                     <p className="text-gray-500 text-sm flex-grow">{blog.description}</p>
-                                    <div className="flex items-center justify-between mt-6">
+                                    <div className="flex items-center justify-between mt-2">
                                         <span className="text-xs text-gray-400">{blog.date}</span>
-                                        <span className="text-sm text-black font-medium hover:underline">
-                                            Read →
+                                         <Link
+                                            key={blog.id}
+                                            to={`/blog/${slug}`}
+                                            className=""
+                                        >
+                                        <span className="text-sm text-blue-600 font-medium">
+                                            Read more →
                                         </span>
+                                        </Link>
                                     </div>
                                 </div>
-                            </Link>
+                            </div>
+                            </>
                         );
                     })}
                 </div>

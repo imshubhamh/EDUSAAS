@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-const faqs = [
+const defaultFaqs = [
   {
     question: "What is EDU SAAS?",
     answer:
@@ -29,8 +29,19 @@ const faqs = [
   },
 ];
 
-export default function FAQ() {
+export default function FAQ({
+  faqs,
+  title,
+  description,
+  subtitle = "Help & Support",
+}) {
   const [openIndex, setOpenIndex] = useState(null);
+
+  // ✅ Fallback logic
+  const faqList = faqs && faqs.length > 0 ? faqs : defaultFaqs;
+  const heading = title || "Frequently asked questions";
+  const desc =
+    description || "Quick answers to common questions about EDU SAAS.";
 
   return (
     <section className="w-full bg-white py-20 sm:py-24">
@@ -39,24 +50,23 @@ export default function FAQ() {
         {/* Header */}
         <div className="mb-14 text-center">
           <p className="text-sm font-medium text-slate-500">
-            Help & Support
+            {subtitle}
           </p>
           <h2 className="mt-3 text-2xl sm:text-3xl font-semibold text-slate-900">
-            Frequently asked questions
+            {heading}
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600">
-            Quick answers to common questions about EDU SAAS.
+            {desc}
           </p>
         </div>
 
         {/* FAQ list */}
         <div className="divide-y divide-slate-200 rounded-xl border border-slate-200">
-          {faqs.map((faq, index) => {
+          {faqList.map((faq, index) => {
             const isOpen = openIndex === index;
 
             return (
               <div key={index} className="bg-white">
-                {/* Question */}
                 <button
                   onClick={() =>
                     setOpenIndex(isOpen ? null : index)
@@ -75,9 +85,8 @@ export default function FAQ() {
                   />
                 </button>
 
-                {/* Answer */}
                 {isOpen && (
-                  <div className="px-5 pb-5 text-sm sm:text-base text-slate-600 leading-relaxed text-start">
+                  <div className="px-5 pb-5 text-sm sm:text-base text-slate-600 leading-relaxed">
                     {faq.answer}
                   </div>
                 )}

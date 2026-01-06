@@ -8,6 +8,8 @@ import AboutPage from "../pages/AboutPage";
 import FAQPage from "../pages/FAQPage";
 import Contact from "../pages/Contact";
 import Careers from "../pages/Careers";
+import PrivacyPage from "../pages/PrivacyPage";
+import Terms from "../pages/Terms";
 
 export const mainRoutes = [
   { path: "/", element: <LandingPage /> },
@@ -28,5 +30,7 @@ export const mainRoutes = [
   // Company
   { path: "/about", element: <AboutPage /> },
    { path: "/careers", element: <Careers /> },
+   { path: "/privacy-policy", element: <PrivacyPage /> },
+   { path: "/terms", element: <Terms /> },
 
 ];

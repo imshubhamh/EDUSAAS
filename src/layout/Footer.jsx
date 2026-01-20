@@ -25,6 +25,7 @@ const footerLinks = [
       { label: "Blog", to: "/blog" },
       { label: "FAQs", to: "/faqs" },
       { label: "Support", to: "/support" },
+      { label: "Roadmap", to: "/roadmap" },
     ],
   },
   {
@@ -34,6 +35,8 @@ const footerLinks = [
       { label: "Careers", to: "/careers" },
       { label: "Privacy", to: "/privacy-policy" },
       { label: "Terms", to: "/terms" },
+      { label: "Changelog", to: "/changelog" },
+
     ],
   },
 ];

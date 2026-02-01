@@ -6,7 +6,7 @@ export default function SignIn() {
         {/* Logo */}
         <div className="text-center mb-8">
           <h1 className="text-2xl font-semibold text-slate-900">
-            SPYI<span className="text-slate-500 font-normal">TECH</span>
+            SPYI<span className="text-slate-500 font-normal">WEB</span>
           </h1>
           <p className="mt-2 text-sm text-slate-600">
             Sign in to your account

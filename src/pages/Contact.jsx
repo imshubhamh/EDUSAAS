@@ -31,50 +31,12 @@ export default function Support() {
                 </div>
             </div>
 
-            {/* ================= QUICK HELP ================= */}
-            <div className="mx-auto max-w-7xl px-6 mt-5">
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                    {[
-                        {
-                            title: "Student Support",
-                            desc: "Courses, assignments, certificates",
-                            icon: AcademicCapIcon,
-                        },
-                        {
-                            title: "Teacher Support",
-                            desc: "Content, classes & reports",
-                            icon: UserIcon,
-                        },
-                        {
-                            title: "Billing & Payments",
-                            desc: "Subscriptions & invoices",
-                            icon: CreditCardIcon,
-                        },
-                        {
-                            title: "Technical Issues",
-                            desc: "Bugs, errors & access issues",
-                            icon: WrenchScrewdriverIcon,
-                        },
-                    ].map((item, i) => (
-                        <div
-                            key={i}
-                            className="rounded-lg border border-gray-200 p-6 hover:shadow-md transition"
-                        >
-                            <item.icon className="h-6 w-6 text-blue-500" />
-                            <h3 className="mt-3 text-lg font-semibold text-gray-900">
-                                {item.title}
-                            </h3>
-                            <p className=" text-sm text-gray-600">{item.desc}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
 
             {/* ================= FAQ ================= */}
-            <div className="mx-auto max-w-4xl px-6 mt-10">
-                <h2 className="text-3xl font-semibold text-gray-900 text-center mb-5">
+            <div className="mx-auto max-w-4xl px-6 mt-10 pb-10">
+                {/* <h2 className="text-3xl font-semibold text-gray-900 text-center mb-5">
                     Common Queries
-                </h2>
+                </h2> */}
 
                 <div className="divide-y divide-slate-200 rounded-xl border border-slate-200">
                     {[
@@ -129,11 +91,47 @@ export default function Support() {
                 </div>
             </div>
 
-            {/* ================= CONTACT + FORM ================= */}
-            <ContactForm />
+            {/* ================= QUICK HELP ================= */}
+            <div className="mx-auto max-w-7xl px-6 mt-10 pb-10">
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    {[
+                        {
+                            title: "Student Support",
+                            desc: "Courses, assignments, certificates",
+                            icon: AcademicCapIcon,
+                        },
+                        {
+                            title: "Teacher Support",
+                            desc: "Content, classes & reports",
+                            icon: UserIcon,
+                        },
+                        {
+                            title: "Billing & Payments",
+                            desc: "Subscriptions & invoices",
+                            icon: CreditCardIcon,
+                        },
+                        {
+                            title: "Technical Issues",
+                            desc: "Bugs, errors & access issues",
+                            icon: WrenchScrewdriverIcon,
+                        },
+                    ].map((item, i) => (
+                        <div
+                            key={i}
+                            className="rounded-lg border border-gray-200 p-6 hover:shadow-md transition"
+                        >
+                            <item.icon className="h-6 w-6 text-blue-500" />
+                            <h3 className="mt-3 text-lg font-semibold text-gray-900">
+                                {item.title}
+                            </h3>
+                            <p className=" text-sm text-gray-600">{item.desc}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
 
-            {/* ================= HELP BY CATEGORY ================= */}
-            <div className="mx-auto max-w-7xl px-6 mt-16">
+  {/* ================= HELP BY CATEGORY ================= */}
+            <div className="mx-auto max-w-7xl px-6 mt-16 pb-10">
                 <h2 className="text-3xl font-semibold text-gray-900 text-center">
                     Find help by category
                 </h2>
@@ -168,6 +166,11 @@ export default function Support() {
                 </div>
             </div>
 
+            
+            {/* ================= CONTACT + FORM ================= */}
+            <ContactForm />
+
+          
 
             {/* ================= SELF HELP RESOURCES ================= */}
             <div className="mx-auto max-w-7xl px-6 mt-20">

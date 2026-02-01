@@ -154,7 +154,7 @@ const Blog = () => {
             {/* ================= HERO ================= */}
             <section className="relative h-[30vh] flex items-center justify-center px-6 pt-28">
                 <div className="text-center space-y-3">
-                    <h1 className="text-3xl sm:text-3xl text-black">SPYI<span className="font-normal text-slate-600">TECH</span> BLOG's</h1>
+                    <h1 className="text-3xl sm:text-3xl text-black">SPYI<span className="font-normal text-slate-600">WEB</span> BLOG's</h1>
                     {/* SPYI<h3 className="font-normal text-slate-600">TECH</h3> */}
                     {/* <p className="text-sm sm:text-base text-gray-500 max-w-xl mx-auto">
                         Insights, updates, and guides on LMS platforms, SaaS solutions, and effective education management.

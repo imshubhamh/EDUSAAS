@@ -60,7 +60,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <h3 className="text-lg font-semibold text-slate-900">
-              SPYI<span className="font-normal text-slate-500">TECH</span>
+              SPYI<span className="font-normal text-slate-500">WEB</span>
             </h3>
 
             <p className="mt-4 text-sm leading-relaxed max-w-sm">

@@ -111,7 +111,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="w-full border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-20 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs sm:text-sm text-slate-500">
-          <p>© {new Date().getFullYear()} SPYI TECH</p>
+          <p>© {new Date().getFullYear()} SPYI WEB</p>
           <p>Built for educators & institutions</p>
         </div>
       </div>

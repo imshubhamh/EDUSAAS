@@ -2,13 +2,13 @@ export const dummyDocs = [
   {
     _id: "1",
     slug: "introduction",
-    category: "Sapher Chain",
+    category: "SPYI WEB",
     subject: "Introduction",
-    metaTitle: "Introduction to Sapher Chain",
-    title: "What is Sapher Chain?",
+    metaTitle: "Introduction to SPYI WEB",
+    title: "What is SPYI WEB?",
     content: `
-      <h2>Welcome to Sapher Chain</h2>
-      <p>Sapher Chain is an education-focused blockchain infrastructure designed for scalability and security.</p>
+      <h2>Welcome to SPYI WEB</h2>
+      <p>SPYI WEB</p>
 
       <h3>Key Features</h3>
       <ul>
@@ -21,7 +21,7 @@ export const dummyDocs = [
   {
     _id: "2",
     slug: "getting-started",
-    category: "Sapher Chain",
+    category: "SPYI WEB",
     subject: "Getting Started",
     metaTitle: "Getting Started",
     title: "Getting Started Guide",
@@ -41,13 +41,13 @@ export const dummyDocs = [
     slug: "sdk-installation",
     category: "sdk",
     subject: "SDK Installation",
-    metaTitle: "Install Sapher SDK",
+    metaTitle: "Install SPYI WEB SDK",
     title: "SDK Installation Guide",
     content: `
       <h2>SDK Installation</h2>
-      <p>Install the Sapher SDK using npm or yarn.</p>
+      <p>Install the SPYI WEB SDK using npm or yarn.</p>
 
-      <pre><code>npm install @sapher/sdk</code></pre>
+      <pre><code>npm install @spyweb/sdk</code></pre>
     `
   }
 ];

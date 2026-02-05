@@ -50,7 +50,7 @@ const Documentation = () => {
 
     // Normalize strings for resilient matching
     const normalize = (str) => (str || "").toLowerCase().replace(/\s+/g, "").trim();
-    const targetCategory = (activeConfig?.category || "Sapher Chain");
+    const targetCategory = (activeConfig?.category || "SPYI WEB");
     const normTarget = normalize(targetCategory);
 
     const filteredDocs = docs.filter(doc => {
@@ -58,7 +58,7 @@ const Documentation = () => {
         const normCat = normalize(docCat);
 
         return normCat === normTarget ||
-            (normCat === "documentation" && normTarget === "sapherchain") ||
+            (normCat === "documentation" && normTarget === "spyweb") ||
             docCat.toLowerCase().includes(targetCategory.toLowerCase());
     });
 

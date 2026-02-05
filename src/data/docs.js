@@ -6,8 +6,8 @@ export const sidebarData = [
   {
     title: "Introduction",
     children: [
-      { title: "What is Sapher Chain?" },
-      { title: "Why Sapher Chain?" },
+      { title: "What is SPYI WEB?" },
+      { title: "Why SPYI WEB?" },
       { title: "Architecture Overview" },
     ],
   },

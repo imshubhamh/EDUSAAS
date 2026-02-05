@@ -60,16 +60,16 @@ const docsConfig = {
     toc: tocItems,
     pages: getPagesFromSidebar(sidebarData),
     title: "Solana Documentation",
-    subtitle: "Sapher Documentation",
+    subtitle: "SPYI WEB Documentation",
     contentType: "docs",
-    category: "Sapher Chain",
+    category: "SPYI WEB",
   },
   api: {
     sidebar: apiSidebarData,
     toc: tocItems,
     pages: getPagesFromSidebar(apiSidebarData),
     title: "API Reference",
-    subtitle: "Sapher API",
+    subtitle: "SPYI WEB API",
     contentType: "api",
     category: "api",
   },
@@ -78,7 +78,7 @@ const docsConfig = {
     toc: tocItems,
     pages: getPagesFromSidebar(sdkSidebarData),
     title: "SDKs",
-    subtitle: "Sapher SDKs",
+    subtitle: "SPYI WEB SDKs",
     contentType: "sdk",
   },
   cookbook: {
@@ -86,7 +86,7 @@ const docsConfig = {
     toc: tocItems,
     pages: getPagesFromSidebar(cookbookSidebarData),
     title: "Cookbook",
-    subtitle: "Sapher Cookbook",
+    subtitle: "SPYI WEB Cookbook",
     contentType: "cookbook",
   },
   contracts: {
@@ -94,7 +94,7 @@ const docsConfig = {
     toc: tocItems,
     pages: getPagesFromSidebar(contractsSidebarData),
     title: "Contracts",
-    subtitle: "Sapher Contracts",
+    subtitle: "SPYI WEB Contracts",
     contentType: "contracts",
   },
   testnet: {
@@ -102,7 +102,7 @@ const docsConfig = {
     toc: tocItems,
     pages: getPagesFromSidebar(testnetSidebarData),
     title: "Testnet",
-    subtitle: "Sapher Testnet",
+    subtitle: "SPYI WEB Testnet",
     contentType: "testnet",
   },
   websocket: {
@@ -110,7 +110,7 @@ const docsConfig = {
     toc: tocItems,
     pages: getPagesFromSidebar(websocketSidebarData),
     title: "Websocket",
-    subtitle: "Sapher Websocket",
+    subtitle: "SPYI WEB Websocket",
     contentType: "websocket",
   },
   sdk_download: {
@@ -118,7 +118,7 @@ const docsConfig = {
     toc: tocItems,
     pages: getPagesFromSidebar(sdkDownloadSidebarData),
     title: "SDK Downloads",
-    subtitle: "Sapher SDK Downloads",
+    subtitle: "SPYI WEB SDK Downloads",
     contentType: "sdk_download",
   },
   support: {
@@ -126,7 +126,7 @@ const docsConfig = {
     toc: tocItems,
     pages: getPagesFromSidebar(supportSidebarData),
     title: "Get Support",
-    subtitle: "Sapher Support",
+    subtitle: "SPYI WEB Support",
     contentType: "support",
   },
 };

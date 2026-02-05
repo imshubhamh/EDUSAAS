@@ -236,7 +236,7 @@ export default function Navbar() {
         {
           title: "For Students",
           desc: "Learn, track progress and get certificates",
-          external: "https://studentportal-ebon.vercel.app/",
+          external: "https://studentspyiweb.vercel.app/",
         },
       ],
     },

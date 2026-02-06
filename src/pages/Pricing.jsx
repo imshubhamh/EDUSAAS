@@ -211,7 +211,7 @@ export default function Pricing() {
                         />
                     </div>
                     <div className="relative mx-auto max-w-2xl lg:mx-0">
-                        <h2 className="text-white text-lg font-semibold">SPYITECH</h2>
+                        <h2 className="text-white text-lg font-semibold">SPYIWEB</h2>
                         <figure>
                             <blockquote className="mt-4 text-lg font-semibold text-white sm:text-xl/8">
                                 <p>
@@ -221,7 +221,7 @@ export default function Pricing() {
                             </blockquote>
                             <figcaption className="mt-6 text-base text-white">
                                 <div className="font-semibold">Judith Black</div>
-                                <div className="mt-1">CEO of SpyiTech</div>
+                                <div className="mt-1">CEO of SpyiWeb</div>
                             </figcaption>
                         </figure>
                     </div>

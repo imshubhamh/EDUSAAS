@@ -16,7 +16,7 @@ const categories = [
 const blogs = [
     {
         id: 1,
-        title: "Understanding SpyiTech Architecture",
+        title: "Understanding SpyiWeb Architecture",
         description:
             "Explore how our LMS platform is built with modular architecture for scalability, security, and smooth multi-user management.",
         date: "Sep 18, 2025",

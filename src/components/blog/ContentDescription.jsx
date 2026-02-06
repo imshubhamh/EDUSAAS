@@ -12,14 +12,14 @@ import { ArrowLeft } from "lucide-react";
 const blogs = [
   {
     id: 1,
-    title: "Understanding SpyiTech Architecture",
+    title: "Understanding SpyiWeb Architecture",
     type: "Blog",
     description:
       "Explore how our LMS platform is built with modular architecture for scalability, security, and smooth multi-user management.",
     date: "Sep 18, 2025",
     category: "Platform",
     featured: true,
-   content: `<p>SpyiTech's architecture is designed for scalability and modularity, ensuring that new features can be added without affecting existing functionality. Its multi-layered design enhances security while enabling seamless collaboration across multiple users and departments. This approach allows institutions to manage their operations efficiently, with improved performance and reliability.</p>`,
+   content: `<p>SpyiWeb's architecture is designed for scalability and modularity, ensuring that new features can be added without affecting existing functionality. Its multi-layered design enhances security while enabling seamless collaboration across multiple users and departments. This approach allows institutions to manage their operations efficiently, with improved performance and reliability.</p>`,
 
     readTime: 5,
     user: [{ name: "John Doe", _id: "1" }],

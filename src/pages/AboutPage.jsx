@@ -215,7 +215,7 @@ export default function AboutPage() {
                                         Discover the best websites across every industry
                                     </h1>
                                     <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
-                                        SPYITECH is your go-to hub to explore top websites in categories like Dairy, Real Estate, Furniture,
+                                        SPYIWEB is your go-to hub to explore top websites in categories like Dairy, Real Estate, Furniture,
                                         Mediation, and more. Whether you’re researching markets, sourcing suppliers, or just browsing smartly —
                                         start your discovery with us.
                                     </p>

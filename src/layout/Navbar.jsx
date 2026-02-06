@@ -1,3 +1,5 @@
+
+
 // import { useState } from "react";
 // import { ChevronDown, Menu, X } from "lucide-react";
 // import { Link } from "react-router-dom";
@@ -40,11 +42,11 @@
 //           desc: "Manage content, batches and students",
 //           path: "/solutions/teachers",
 //         },
-//       {
-//         title: "For Students",
-//         desc: "Learn, track progress and get certificates",
-//         external: "https://studentportal-ebon.vercel.app/",
-//       },
+//         {
+//           title: "For Students",
+//           desc: "Learn, track progress and get certificates",
+//           external: "https://studentspyiweb.vercel.app/",
+//         },
 //       ],
 //     },
 //     {
@@ -69,7 +71,6 @@
 //     },
 //   ];
 
-
 //   return (
 //     <header className="fixed top-0 inset-x-0 z-50 bg-white border-b border-slate-200">
 //       <div className="max-w-7xl mx-auto px-6">
@@ -91,30 +92,49 @@
 //                 onMouseEnter={() => setActiveMenu(menu.name)}
 //                 onMouseLeave={() => setActiveMenu(null)}
 //               >
-//                 {/* Trigger */}
 //                 <button className="flex items-center gap-1 text-sm font-medium text-slate-700 hover:text-slate-900">
 //                   {menu.name}
 //                   <ChevronDown size={14} />
 //                 </button>
 
-//                 {/* Dropdown */}
 //                 {activeMenu === menu.name && (
 //                   <div className="absolute left-0 top-full mt-1 w-72">
-//                     {/* Hover buffer */}
 //                     <div className="absolute -top-2 left-0 right-0 h-2" />
 
 //                     <div className="rounded-lg border border-slate-200 bg-white shadow-sm p-1">
-//                       {menu.items.map((item) => (
-//                         <Link
-//                           key={item.title}
-//                           to={item.path}
-//                           className="block rounded-md px-3 py-2.5 hover:bg-slate-50"
-//                           onClick={() => setActiveMenu(null)}
-//                         >
-//                           <p className="text-sm font-medium text-slate-800 text-start">{item.title}</p>
-//                           <p className="mt-0.5 text-xs text-slate-500 leading-snug text-start">{item.desc}</p>
-//                         </Link>
-//                       ))}
+//                       {menu.items.map((item) =>
+//                         item.external ? (
+//                           <a
+//                             key={item.title}
+//                             href={item.external}
+//                             target="_blank"
+//                             rel="noopener noreferrer"
+//                             className="block rounded-md px-3 py-2.5 hover:bg-slate-50"
+//                             onClick={() => setActiveMenu(null)}
+//                           >
+//                             <p className="text-sm font-medium text-slate-800 text-start">
+//                               {item.title}
+//                             </p>
+//                             <p className="mt-0.5 text-xs text-slate-500 leading-snug text-start">
+//                               {item.desc}
+//                             </p>
+//                           </a>
+//                         ) : (
+//                           <Link
+//                             key={item.title}
+//                             to={item.path}
+//                             className="block rounded-md px-3 py-2.5 hover:bg-slate-50"
+//                             onClick={() => setActiveMenu(null)}
+//                           >
+//                             <p className="text-sm font-medium text-slate-800 text-start">
+//                               {item.title}
+//                             </p>
+//                             <p className="mt-0.5 text-xs text-slate-500 leading-snug text-start">
+//                               {item.desc}
+//                             </p>
+//                           </Link>
+//                         )
+//                       )}
 //                     </div>
 //                   </div>
 //                 )}
@@ -139,7 +159,6 @@
 //             </Link>
 //           </div>
 
-
 //           {/* Mobile Toggle */}
 //           <button
 //             className="lg:hidden text-slate-700"
@@ -160,26 +179,53 @@
 //                   {menu.name}
 //                 </summary>
 //                 <div className="mt-2 pl-3 space-y-3">
-//                   {menu.items.map((item) => (
-//                     <Link
-//                       key={item.title}
-//                       to={item.path}
-//                       onClick={() => setMobileOpen(false)}
-//                       className="block"
-//                     >
-//                       <p className="text-sm text-slate-800 text-start">{item.title}</p>
-//                       <p className="text-xs text-slate-500 text-start">{item.desc}</p>
-//                     </Link>
-//                   ))}
+//                   {menu.items.map((item) =>
+//                     item.external ? (
+//                       <a
+//                         key={item.title}
+//                         href={item.external}
+//                         target="_blank"
+//                         rel="noopener noreferrer"
+//                         onClick={() => setMobileOpen(false)}
+//                         className="block"
+//                       >
+//                         <p className="text-sm text-slate-800 text-start">
+//                           {item.title}
+//                         </p>
+//                         <p className="text-xs text-slate-500 text-start">
+//                           {item.desc}
+//                         </p>
+//                       </a>
+//                     ) : (
+//                       <Link
+//                         key={item.title}
+//                         to={item.path}
+//                         onClick={() => setMobileOpen(false)}
+//                         className="block"
+//                       >
+//                         <p className="text-sm text-slate-800 text-start">
+//                           {item.title}
+//                         </p>
+//                         <p className="text-xs text-slate-500 text-start">
+//                           {item.desc}
+//                         </p>
+//                       </Link>
+//                     )
+//                   )}
 //                 </div>
 //               </details>
 //             ))}
 
 //             <div className="pt-4 border-t flex flex-col gap-3">
-//               <button className="text-left text-sm">Sign in</button>
-//               <button className="px-4 py-2 rounded-md border border-slate-300 text-sm">
+//               <Link to="/signin" className="text-left text-sm">
+//                 Sign in
+//               </Link>
+//               <Link
+//                 to="/register"
+//                 className="px-4 py-2 rounded-md border border-slate-300 text-sm"
+//               >
 //                 Get started
-//               </button>
+//               </Link>
 //             </div>
 //           </div>
 //         </div>
@@ -189,90 +235,135 @@
 // }
 
 
-// ----------------
+// -----------
 
 import { useState } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import {
+  Code2,
+  Layers,
+  LayoutDashboard,
+  Globe,
+  User,
+  GraduationCap,
+  FileText,
+  Newspaper,
+  HelpCircle,
+  ChevronDown,
+  Menu,
+  X,
+} from "lucide-react";
+
+
 import { Link } from "react-router-dom";
+import logo from "../assets/icons/spyi-logo.jpg"
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
 
-  const menus = [
-    {
-      name: "Products",
-      items: [
-        {
-          title: "LMS Platform",
-          desc: "Create and manage courses, notes and students",
-          path: "/products/lms",
-        },
-        {
-          title: "Multi-Tenant SaaS",
-          desc: "Launch multiple education websites from one panel",
-          path: "/products/saas",
-        },
-        {
-          title: "Admin Dashboard",
-          desc: "Manage users, analytics and payments",
-          path: "/products/admin-dashboard",
-        },
-      ],
-    },
-    {
-      name: "Solutions",
-      items: [
-        {
-          title: "For Colleges",
-          desc: "Centralized learning system for institutions",
-          path: "/solutions/colleges",
-        },
-        {
-          title: "For Teachers",
-          desc: "Manage content, batches and students",
-          path: "/solutions/teachers",
-        },
-        {
-          title: "For Students",
-          desc: "Learn, track progress and get certificates",
-          external: "https://studentspyiweb.vercel.app/",
-        },
-      ],
-    },
-    {
-      name: "Resources",
-      items: [
-        {
-          title: "Docs",
-          desc: "Developer & platform documentation",
-          path: "/docs",
-        },
-        {
-          title: "Blog",
-          desc: "Updates, guides and best practices",
-          path: "/blog",
-        },
-        {
-          title: "Support",
-          desc: "Help center and FAQs",
-          path: "/support",
-        },
-      ],
-    },
-  ];
+  /* ICON MAP (NO LOGIC CHANGE) */
+const itemIcons = {
+  // Services / Products
+  "Web Development": Code2,
+  "SaaS Development": Layers,
+  "Admin Dashboards": LayoutDashboard,
+
+  // Solutions
+  "For Startups": Globe,
+  "For Teachers": User,
+  "For Students": GraduationCap,
+
+  // Resources
+  Docs: FileText,
+  Blog: Newspaper,
+  Support: HelpCircle,
+};
+
+const menus = [
+  {
+    name: "Services",
+    items: [
+      {
+        title: "Web Development",
+        desc: "Modern, fast and scalable websites for businesses",
+        path: "/services/web-development",
+      },
+      {
+        title: "SaaS Development",
+        desc: "Custom SaaS platforms built from scratch",
+        path: "/services/saas-development",
+      },
+      {
+        title: "Admin Dashboards",
+        desc: "Powerful dashboards with analytics & control",
+        path: "/services/admin-dashboards",
+      },
+    ],
+  },
+  {
+    name: "Solutions",
+    items: [
+      {
+        title: "For Startups",
+        desc: "Launch MVPs and scale products faster",
+        path: "/solutions/startups",
+      },
+      {
+        title: "For Teachers",
+        desc: "Create courses, batches and manage students",
+        path: "/solutions/teachers",
+      },
+      {
+        title: "For Students",
+        desc: "Learn online, track progress & certifications",
+        external: "https://studentspyiweb.vercel.app/",
+      },
+    ],
+  },
+  {
+    name: "Resources",
+    items: [
+      {
+        title: "Docs",
+        desc: "Technical & platform documentation",
+        path: "/docs",
+      },
+      {
+        title: "Blog",
+        desc: "Guides, updates & case studies",
+        path: "/blog",
+      },
+      {
+        title: "Support",
+        desc: "Help center & contact support",
+        path: "/support",
+      },
+    ],
+  },
+];
+
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-6">
         <div className="h-16 flex items-center justify-between">
-          {/* Logo */}
-          <Link
-            to="/"
-            className="text-lg font-semibold text-slate-900 hover:opacity-80"
-          >
-            SPYI<span className="font-normal text-slate-600">WEB</span>
-          </Link>
+        <Link
+          to="/"
+          className="flex items-center gap-2 text-lg font-semibold text-slate-900 hover:opacity-80"
+        >
+          {/* Logo Image */}
+          <img
+            src={logo}
+            alt="SPYIWEB Logo"
+            className="h-8 w-8 object-contain rounded-md"
+          />
+
+          {/* Logo Text */}
+          <span>
+            SPYI
+            <span className="font-normal text-slate-600">WEB</span>
+          </span>
+        </Link>
 
           {/* Desktop Menu */}
           <nav className="hidden lg:flex items-center gap-8">
@@ -293,8 +384,29 @@ export default function Navbar() {
                     <div className="absolute -top-2 left-0 right-0 h-2" />
 
                     <div className="rounded-lg border border-slate-200 bg-white shadow-sm p-1">
-                      {menu.items.map((item) =>
-                        item.external ? (
+                      {menu.items.map((item) => {
+                        const Icon = itemIcons[item.title];
+
+                        const Content = (
+                          <div className="flex gap-3 items-start">
+                            {Icon && (
+                              <Icon
+                                size={18}
+                                className="text-slate-500 mt-0.5"
+                              />
+                            )}
+                            <div>
+                              <p className="text-sm font-medium text-slate-800 text-start">
+                                {item.title}
+                              </p>
+                              <p className="mt-0.5 text-xs text-slate-500 leading-snug text-start">
+                                {item.desc}
+                              </p>
+                            </div>
+                          </div>
+                        );
+
+                        return item.external ? (
                           <a
                             key={item.title}
                             href={item.external}
@@ -303,12 +415,7 @@ export default function Navbar() {
                             className="block rounded-md px-3 py-2.5 hover:bg-slate-50"
                             onClick={() => setActiveMenu(null)}
                           >
-                            <p className="text-sm font-medium text-slate-800 text-start">
-                              {item.title}
-                            </p>
-                            <p className="mt-0.5 text-xs text-slate-500 leading-snug text-start">
-                              {item.desc}
-                            </p>
+                            {Content}
                           </a>
                         ) : (
                           <Link
@@ -317,15 +424,10 @@ export default function Navbar() {
                             className="block rounded-md px-3 py-2.5 hover:bg-slate-50"
                             onClick={() => setActiveMenu(null)}
                           >
-                            <p className="text-sm font-medium text-slate-800 text-start">
-                              {item.title}
-                            </p>
-                            <p className="mt-0.5 text-xs text-slate-500 leading-snug text-start">
-                              {item.desc}
-                            </p>
+                            {Content}
                           </Link>
-                        )
-                      )}
+                        );
+                      })}
                     </div>
                   </div>
                 )}
@@ -355,7 +457,7 @@ export default function Navbar() {
             className="lg:hidden text-slate-700"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
-            {mobileOpen ? <X /> : <Menu />}
+            {mobileOpen ? <X/> : <Menu />}
           </button>
         </div>
       </div>
@@ -370,39 +472,51 @@ export default function Navbar() {
                   {menu.name}
                 </summary>
                 <div className="mt-2 pl-3 space-y-3">
-                  {menu.items.map((item) =>
-                    item.external ? (
+                  {menu.items.map((item) => {
+                    const Icon = itemIcons[item.title];
+
+                    return item.external ? (
                       <a
                         key={item.title}
                         href={item.external}
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => setMobileOpen(false)}
-                        className="block"
+                        className="flex gap-2 items-start"
                       >
-                        <p className="text-sm text-slate-800 text-start">
-                          {item.title}
-                        </p>
-                        <p className="text-xs text-slate-500 text-start">
-                          {item.desc}
-                        </p>
+                        {Icon && (
+                          <Icon size={16} className="text-slate-500 mt-0.5" />
+                        )}
+                        <div>
+                          <p className="text-sm text-slate-800 text-start">
+                            {item.title}
+                          </p>
+                          <p className="text-xs text-slate-500 text-start">
+                            {item.desc}
+                          </p>
+                        </div>
                       </a>
                     ) : (
                       <Link
                         key={item.title}
                         to={item.path}
                         onClick={() => setMobileOpen(false)}
-                        className="block"
+                        className="flex gap-2 items-start"
                       >
-                        <p className="text-sm text-slate-800 text-start">
-                          {item.title}
-                        </p>
-                        <p className="text-xs text-slate-500 text-start">
-                          {item.desc}
-                        </p>
+                        {Icon && (
+                          <Icon size={16} className="text-slate-500 mt-0.5" />
+                        )}
+                        <div>
+                          <p className="text-sm text-slate-800 text-start">
+                            {item.title}
+                          </p>
+                          <p className="text-xs text-slate-500 text-start">
+                            {item.desc}
+                          </p>
+                        </div>
                       </Link>
-                    )
-                  )}
+                    );
+                  })}
                 </div>
               </details>
             ))}
